@@ -11,9 +11,7 @@ const markdownToHTML = (text) => {
 };
 
 const perguntarAI = async (question, game) => {
-  const model = "gemini-2.0-flash";
-  const geminiURL = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-  const perguntaapex = `
+  const prompt = `
    ## Especialidade
 Você é um especialista assistente de meta para o jogo ${game}
 
@@ -345,28 +343,23 @@ Você deve responder perguntas sobre o jogo, com foco em estratégias, agentes/p
   ];
 
   // chamada API
-  const response = await fetch(geminiURL, {
+  const response = await fetch("http://localhost:3000/ask", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      contents,
-      tools,
-    }),
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ prompt }),
   });
 
   const data = await response.json();
-  return data.candidates[0].content.parts[0].text;
+  return data.text;
 };
 
 const enviarFomulario = async (event) => {
   event.preventDefault();
-  const apiKey = apiKeyInput.value;
+  // const apiKey = apiKeyInput.value;
   const game = gameSelect.value;
   const question = questionInput.value;
 
-  if (apiKey == "" || game == "" || question == "") {
+  if (game == "" || question == "") {
     alert("Por favor, preencha todos os campos");
     return;
   }
