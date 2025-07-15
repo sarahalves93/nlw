@@ -1,0 +1,27 @@
+{
+  "name": "nlw",
+  "version": "1.0.0",
+  "description": "- HyperText\r   - Textos puros, livros, revistas, jornais\r   - Links: acessar outros documentos\r   - Imagens, vídeos, áudios\r - Markup\r   - Marcação\r   - Tags: <a>Link</a>\r   - Atributos: <a href=\"https://rocketseat.com.br\">\r   - Globais: id, class, ...\r - Language\r   - Linguagem\r   - Sintaxe: maneira de escrever",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarahalves93/nlw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sarahalves93/nlw/issues"
+  },
+  "homepage": "https://github.com/sarahalves93/nlw#readme",
+  "dependencies": {
+    "axios": "^1.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0"
+  }
+}
