@@ -135,3 +135,4 @@ A partir disso, o HTML é impactado visualmente.
 - One shot: uma unica pergunta sem muito contexto
 - Few shot: é apresentado exemplos do que se espera
 - Chain of Tought: Cadeia de pensamento para a IA responder gradativamente conforme a instrução
+# nlw
