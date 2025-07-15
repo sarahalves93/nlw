@@ -387,7 +387,7 @@ const enviarFomulario = async (event) => {
   } finally {
     askButton.disabled = false;
     askButton.textContent = "Perguntar";
-    askButton.classList.remove = "loading";
+    askButton.classList.remove("loading");
   }
 };
 form.addEventListener("submit", enviarFomulario);
